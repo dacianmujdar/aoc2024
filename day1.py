@@ -13,4 +13,3 @@ if __name__ == '__main__':
         freq = len([v for v in v2 if v == value])
         total += freq * value
     print(total)
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
