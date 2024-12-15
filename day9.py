@@ -57,13 +57,14 @@ if __name__ == '__main__':
     total = 0
     i = 0
 
-    result = []
     while not q.empty():
         nr = int(text[i])
         pop_op = q.pop_left if i % 2 == 0 else q.pop_right
         end_index = index + nr
         while index < end_index and not q.empty():
-            total += index * pop_op()
+            elem = pop_op()
+            print(f"{index} * {elem}")
+            total += index * elem
             index += 1
         i += 1
 
