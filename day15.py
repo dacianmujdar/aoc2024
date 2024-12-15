@@ -1,4 +1,3 @@
-
 WALL, ROBOT, BOX, SPACE = "#", "@", 'O', '.'
 
 MOVES = {
@@ -17,7 +16,7 @@ def get_next_space(move, robot_i, robot_j):
         j += delta_j
     if matrix[i][j] == SPACE:
         return i, j
-    return robot_i, robot_j # no move possible
+    return robot_i, robot_j  # no move possible
 
 
 def make_move(move, robot_i, robot_j):
@@ -26,9 +25,9 @@ def make_move(move, robot_i, robot_j):
 
     if i != robot_i or j != robot_j:
         matrix[i][j] = BOX
-        matrix[robot_i+delta_i][robot_j+delta_j] = ROBOT
+        matrix[robot_i + delta_i][robot_j + delta_j] = ROBOT
         matrix[robot_i][robot_j] = SPACE
-        return robot_i+delta_i, robot_j+delta_j
+        return robot_i + delta_i, robot_j + delta_j
     return robot_i, robot_j
 
 

@@ -67,9 +67,6 @@ if __name__ == '__main__':
     n, m = len(matrix), len(matrix[0])
     start_i, start_j = [(i, j) for i, row in enumerate(matrix) for j, char in enumerate(row) if char == ROBOT][0]
 
-    for line in matrix:
-        print("".join(line))
-
     i, j = start_i, start_j
     for move in moves:
         if next_move(move, i, j):
